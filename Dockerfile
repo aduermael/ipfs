@@ -9,11 +9,12 @@ RUN rm -r go-ipfs
 RUN rm ipfs.tar
 
 EXPOSE 4001
-EXPOSE 4002/udp
 EXPOSE 5001
 EXPOSE 8080
 
 COPY start /usr/local/bin/start
 RUN chmod +x /usr/local/bin/start
+
+WORKDIR /root/.ipfs
 
 ENTRYPOINT start

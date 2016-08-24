@@ -2,4 +2,7 @@
 ipfs init
 ipfs config Addresses.API /ip4/0.0.0.0/tcp/5001
 ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/8080
+# don't start with existing peers
+# ipfs config Bootstrap --json "[\"/ip4/104.131.131.82/tcp/4001/ipfs/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ"\""]"
+ipfs config Bootstrap --json "[]"
 /bin/bash
